@@ -1,0 +1,4 @@
+# URLs matching the regex in the first column are rewritten using the string
+# in the second column. In this case, strip everything after the ? in the url.
+# XXX NOTE: The separater between fields must be a tab!
+^http:\/\/([^\.]+)\.s3\.amazonaws\.com/([^\?]+)(.*)	http://$1.s3.amazonaws.com/$2

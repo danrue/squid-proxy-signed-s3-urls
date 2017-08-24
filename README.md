@@ -1,5 +1,11 @@
 # Squid Cache Signed S3 Objects
 
+This is a proof of concept for caching signed S3 downloads. The example URL is
+http://snapshots.linaro.org/android/android-vts/hikey-userdebug/129/MANIFEST,
+which returns an HTTP 302 redirect to a signed S3 download. The url on the
+download changes every time, so squid needs to strip the signature and return a
+cached result.
+
 ## Build local squid container with custom configuration
 
     docker build -t squid .

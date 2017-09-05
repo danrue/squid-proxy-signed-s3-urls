@@ -10,6 +10,7 @@ cached result.
 
     docker build -t squid .
     docker run -p 3128:3128 -it squid
+    /etc/init.d/squid3 start
 
 ## Test in a separate shell
 
